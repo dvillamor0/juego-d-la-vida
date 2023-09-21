@@ -119,11 +119,19 @@ class Juego{
             }
 
             viven.forEach(element => {
-                this.malla[element.x][element.y] = true;
+                try {
+                    this.malla[element.x][element.y] = true;                    
+                } catch (error) {
+                    //pass
+                }
             });
 
             mueren.forEach(element => {
-                this.malla[element.x][element.y] = false;
+                try {
+                    this.malla[element.x][element.y] = false;                    
+                } catch (error) {
+                    //pass
+                }
             });   
         }
     }

@@ -61,6 +61,22 @@ function playGame() {
   }
 }
 
+function guardar(numero) {
+  console.log(numero,JSON.stringify(juego.malla));
+}
+
+function leer(numero) {
+  const url = `http://127.0.0.1:8164/assets/${numero}.txt`; // para prosesing cambiar a 127.0.0.1:8164 vs code: 127.0.0.1:5500
+
+  axios.get(url)
+    .then(response => {
+      juego.malla = JSON.parse(response.data);
+    })
+    .catch(error => {
+      console.error(`Error al leer el archivo ${numero}.txt:`, error);
+    });
+}
+
 function restart() {
   location.reload();
 }

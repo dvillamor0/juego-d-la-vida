@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>juego de la Vida</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>juego de la Vida</title>
 
-    <script src="./js/bootstrap.js"></script>
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-  <body>
-    <script src="/src/juego.js"></script>
-    <script src="sketch.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <script src="libraries/axios.min.js"></script>
+</head>
 
-    <div id="canvas"></div>
-    <br>
-    <div class="control container d-flex justify-content-center align-items-center">
-      <div class="btn btn-secondary btn-lg" id="play" onclick="playGame()">
-        play
-      </div>
-      <div style="width: 20%;"></div>
-      <div class="btn btn-secondary btn-lg" onclick="restart()">
-        restart
-      </div>
+<body>
+  <script src="/src/juego.js"></script>
+  <script src="sketch.js"></script>
+
+  <div id="canvas"></div>
+  <br>
+  <div class="control container d-flex justify-content-center align-items-center">
+    <div class="btn btn-secondary btn-lg" id="play" onclick="playGame()">
+      play
     </div>
-  </body>
+    <div style="width: 20%;"></div>
+    <div class="btn btn-secondary btn-lg" onclick="restart()">
+      restart
+    </div>
+  </div>
+  <br>
+
+  <div class="container align-items-center d-flex justify-content-center">
+    <div class="btn btn-secondary btn-lg" onclick="leer(1)">
+      1
+    </div>
+    <div class="btn btn-secondary btn-lg" onclick="leer(2)">
+      2
+    </div>
+    <div class="btn btn-secondary btn-lg" onclick="leer(3)">
+      3
+    </div>
+    <div class="btn btn-secondary btn-lg" onclick="leer(4)">
+      4
+    </div>
+    <div class="btn btn-secondary btn-lg" onclick="leer(5)">
+      5
+    </div>
+  </div>
+</body>
+
 </html>
