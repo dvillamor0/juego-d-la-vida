@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>juego de la Vida</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="./js/bootstrap.js"></script>
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <script src="/src/juego.js"></script>
+    <script src="sketch.js"></script>
+
+    <div id="canvas"></div>
+    <br>
+    <div class="control container d-flex justify-content-center align-items-center">
+      <div class="btn btn-secondary btn-lg" id="play" onclick="playGame()">
+        play
+      </div>
+      <div style="width: 20%;"></div>
+      <div class="btn btn-secondary btn-lg" onclick="restart()">
+        restart
+      </div>
+    </div>
+  </body>
+</html>
