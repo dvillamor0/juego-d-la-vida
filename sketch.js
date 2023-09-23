@@ -71,6 +71,7 @@ function leer(numero) {
   axios.get(url)
     .then(response => {
       juego.malla = JSON.parse(response.data);
+      windowResized();
     })
     .catch(error => {
       console.error(`Error al leer el archivo ${numero}.txt:`, error);
